@@ -25,7 +25,7 @@ import java.io.File;
  * @author andre
  */
 public interface LogFileParser {
-
+    
     // Break text file into several using prefix + integer from 0 to 23 as criteria for breaking
     void breakUsingPrefix(String prefix, File log, String destinationPath, String destinationPrefix);
    

@@ -13,6 +13,10 @@ import java.util.Date;
 public class Message {
 
     private String queueId;
+    
+    // @TODO Why don't we do something like: 
+    // private User sender;
+    // private User recipient
     private String senderName;
     private String recipientName;
     private Date timestamp;
