@@ -30,5 +30,24 @@ public class User {
     public void setDetails(Map details) {
         this.details = details;
     }
-
+    
+/**
+ * We Will have to put several elements in the details MAP I'll List them here:
+ * 
+ * email
+ * age
+ * sex
+ * placeOfBirth
+ * firstSeen
+ * lastSeen
+ * totalNumberOfEmailsSent
+ * totalNumberOfEmailsReceived
+ * positionAtIscte
+ * department
+ * academicDegree
+ * course
+ * year
+ * yearsAtIscte
+ * erasmos
+ */    
 }
