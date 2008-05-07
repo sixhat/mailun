@@ -14,14 +14,16 @@ public class Message {
 
     private String queueId;
     
-    // @TODO Why don't we do something like: 
-    // private User sender;
-    // private User recipient
-    private String senderName;
-    private String recipientName;
+    private User sender;
+    private User recipient;
     private Date timestamp;
     // To determine recipient's visibility of other recipients
     // @TODO Verify this field's data type
+    // Probably should be a list of values: ONE_TO_ONE, ONE_TO_MANY_FULL, ONE_TO_MANY_BLIND, ONE_TO_MANY_LIST
+    // So if it is a message one to one, visibility is full
+    // if it is a message one to many it can either be full or none (blind)
+    // we can also distinguish a message that is directed to a list so that visibility is special because
+    // we may consider that a member of a list knows who other members are
     private String visibility; 
 
     public String getQueueId() {
@@ -31,23 +33,7 @@ public class Message {
     public void setQueueId(String queueId) {
         this.queueId = queueId;
     }
-
-    public String getSenderName() {
-        return senderName;
-    }
-
-    public void setSenderName(String senderName) {
-        this.senderName = senderName;
-    }
-
-    public String getRecipientName() {
-        return recipientName;
-    }
-
-    public void setRecipientName(String recipientName) {
-        this.recipientName = recipientName;
-    }
-
+    
     public Date getTimestamp() {
         return timestamp;
     }
@@ -62,6 +48,22 @@ public class Message {
 
     public void setVisibility(String visibility) {
         this.visibility = visibility;
+    }
+
+    public User getSender() {
+        return sender;
+    }
+
+    public void setSender(User sender) {
+        this.sender = sender;
+    }
+
+    public User getRecipient() {
+        return recipient;
+    }
+
+    public void setRecipient(User recipient) {
+        this.recipient = recipient;
     }
    
 }
